@@ -1,28 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import AllPosts from './components/AllPosts.js';
+import OnePost from './components/OnePost.js';
 
 // Article: https://www.sanity.io/guides/build-your-first-blog-using-react
 // Code: https://github.com/sanity-io/create-react-app-blog
 
-function App() {
+// React 18 Version (update index.js too)
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route exact path='/' element={<AllPosts />} />
+        <Route exact path='/:slug' element={<OnePost />} />
+        {/* <Route path='*' element={<Error />} /> */}
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
