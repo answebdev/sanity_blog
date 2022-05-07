@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+// Article: https://www.sanity.io/guides/build-your-first-blog-using-react
+// Code: https://github.com/sanity-io/create-react-app-blog
+
 function App() {
   return (
     <div className="App">
